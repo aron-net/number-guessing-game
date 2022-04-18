@@ -93,7 +93,6 @@
 
         <script>
             let randomNumber = Math.floor(Math.random() * 100) + 1;
-            const numberClass = documnet.querySelector('.number');
             const guesses = document.querySelector('.guesses');
             const lastResult = document.querySelector('.lastResult');
             const lowOrHi = document.querySelector('.lowOrHi');
@@ -139,7 +138,7 @@
                 guessSubmit.disabled = true;
                 resetButton = document.createElement('button');
                 resetButton.textContent = 'Start new game';
-                numberClass.appendChild(resetButton);
+                document.body.appendChild(resetButton);
                 resetButton.addEventListener('click', resetGame);
             }
 
